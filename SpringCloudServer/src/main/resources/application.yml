@@ -1,0 +1,22 @@
+server:
+  port: 8081
+  
+security:
+  basic:
+    enabled: false
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rahulkarale/Spring-CloudConfig.git
+          search-paths:
+            - 'station*'
+          repos:
+            perf:
+              pattern:
+                - "*/perf"
+              uri: https://github.com/rahulkarale/springcloudeconfig-prf.git
+              search-paths:
+                - 'station*'
+  
