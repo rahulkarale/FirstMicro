@@ -33,4 +33,8 @@ public class UserController {
     public UserRecord getUser(@PathVariable int id){  
         return userService.getUser(id);  
     }  
+    @RequestMapping(value="/user3/{name}", method=RequestMethod.GET)  
+    public UserRecord getUserByName(@PathVariable String name){  
+        return userService.getUserByName(name);  
+    }  
 }  

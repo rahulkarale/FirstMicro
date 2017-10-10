@@ -16,7 +16,10 @@ public class UserService {
     }  
     public UserRecord getUser(int id){  
         return userRepository.findById(id);  
-    }  
+    }
+    public UserRecord getUserByName(String  name){  
+        return userRepository.findByName(name);  
+    }
     public void addUser(UserRecord userRecord){  
         userRepository.save(userRecord);  
     }  
